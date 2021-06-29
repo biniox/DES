@@ -1,0 +1,58 @@
+body {
+    background-color:cornflowerblue;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2em;
+    width: 100vw;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 40vw;
+}
+
+.form * {
+    margin-bottom: 5px;
+}
+
+.form__title {
+    font-size: 1.5em;
+}
+
+input[type="text"] {
+    height: 40px;
+    color:cornflowerblue;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+
+input[type="submit"], input[type="button"] {
+    height: 40px;
+    /* color:white; */
+    font-weight: bold;
+    padding-left: 10px;
+    background-color:rgb(255, 216, 41);
+    border: none;
+    cursor: pointer;
+}
+
+.encode_input_container--key {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.encode_result--title {
+    word-wrap: break-word;
+}
