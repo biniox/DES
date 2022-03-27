@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">
+        3DES koder - Jarosław Bińczyk
+    </div>
+
+
+
+    <form class="encode form">
+        <div class="form__title">Kodowanie</div>
+        <input class="encode_input--text" type="text" placeholder="ciąg do zakodowania" value="0123456789ABCDEF0123456789ABCDEF">
+
+        <div class="form__radio">
+            <input class="encode_input--textIsHex" name="text_radio" type="radio" value="Hex" checked> Szesnastkowo
+        </div>
+        <div class="encode_input_container--key">
+            <input class="encode_input--key" type="text" placeholder="klucz" value="133457799BBCDFF1">
+            <input class="encode_input--generate" type="button" placeholder="klucz" value="Generuj klucz">
+        </div>
+
+        <input class="encode_input--key2" type="text" placeholder="klucz nr 2" value="133457799BBCDFF1">
+        <input class="encode_input--key3" type="text" placeholder="klucz nr 3" value="133457799BBCDFF1">
+        
+
+        <div class="form__radio">
+            <input class="encode_input--keyIsHex" name="key__radio" type="radio" value="Hex" checked> Szesnastkowo
+        </div>
+
+        <div class="">
+            plik <input type="file" name="inputfile" id="fileEncode">
+        </div>
+
+        <input type="submit" value="Zakoduj">
+
+        <div class="encode_result">
+            <div class="encode_result--title">
+                
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+    <form class="decode form">
+        <div class="form__title">Dekodowanie</div>
+        <input class="encode_input--text" type="text" placeholder="ciąg do zakodowania" value="0123456789ABCDEF0123456789ABCDEF">
+
+        <div class="form__radio">
+            <input class="encode_input--textIsHex" name="text_radio" type="radio" value="Hex" checked> Szesnastkowo
+        </div>
+        
+        <input class="encode_input--key" type="text" placeholder="klucz" value="133457799BBCDFF1">
+        
+        <input class="encode_input--key2" type="text" placeholder="klucz nr 2" value="133457799BBCDFF1">
+        <input class="encode_input--key3" type="text" placeholder="klucz nr 2" value="133457799BBCDFF1">
+
+        <div class="form__radio">
+            <input class="encode_input--keyIsHex" name="key__radio" type="radio" value="Hex" checked> Szesnastkowo
+        </div>
+
+
+        <div class="">
+            plik <input id="fileDecode" class="encode_input--file" name="file" type="file" value="Hex" checked>
+        </div>
+        <input type="submit" value="Zdekoduj">
+
+        <div class="encode_result">
+            <div class="encode_result--title">
+                
+            </div>
+        </div>
+    </form>
+
+</body>
+
+<script src="3desMain.js" type="module"></script>
+
+</html>

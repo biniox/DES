@@ -84,6 +84,28 @@ const shift_left_twice = (key_chunk) => {
     return key_chunk; 
 }
 
+function convertAciiToHex(str)
+  {
+	const arr1 = [];
+	for (let n = 0, l = str.length; n < l; n ++) 
+     {
+		const hex = Number(str.charCodeAt(n)).toString(16);
+		arr1.push(hex);
+	 }
+	return arr1.join('').toUpperCase();
+}
 
 
-export { Xor, convertBinaryToDecimal, convertDecimalToBinary, shift_left_twice, shift_left_once, convertBinaryToChar, convertHexToBinary, convertAsciToBinary, convertBinaryToHex }
+function convertHexToAscii(str1)
+ {
+	const hex  = str1.toString();
+	let str = '';
+	for (var n = 0; n < hex.length; n += 2) {
+		str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+	}
+	return str;
+ }
+
+
+
+export { Xor, convertBinaryToDecimal, convertDecimalToBinary, shift_left_twice, shift_left_once, convertBinaryToChar, convertHexToBinary, convertAsciToBinary, convertBinaryToHex, convertAciiToHex, convertHexToAscii }

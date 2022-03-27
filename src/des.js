@@ -213,4 +213,13 @@ const decrypt = (round_keys, pt) => {
 	return encrypt(round_keys, pt);
 }
 
-export { decrypt, encrypt, generate_keys }
+
+const encrypt3 = (key1, key2, key3, pt) => {
+	return encrypt(key3, decrypt(key2, encrypt(key1, pt)));
+}
+
+const decrypt3 = (key1, key2, key3, pt) => {
+	return decrypt(key1, encrypt(key2, decrypt(key3, pt)));
+}
+
+export { decrypt, encrypt, generate_keys, encrypt3, decrypt3 }
