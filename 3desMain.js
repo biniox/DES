@@ -89,6 +89,8 @@ const encryptFromForm = (textInput, keyInput, keyInput2, keyInput3, textIsHex, k
     const key2 = keyisHex ? convertHexToBinary(keyInput2) : convertAsciToBinary(keyInput2);
     const key3 = keyisHex ? convertHexToBinary(keyInput3) : convertAsciToBinary(keyInput3);
     let toReturn = "";
+    
+    console.log(textInput, keyInput, keyInput2, keyInput3, textIsHex, keyisHex);
 
     while(textInput) {
         let toAdd = textInput.slice(0, byteLength);
